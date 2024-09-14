@@ -12,34 +12,34 @@ int main()
 	int min = 0;
 	int id;
 
-	printf("»óÇ° °³¼ö(Á¾·ù)ÀÔ·Â ");
+	printf("ìƒí’ˆ ê°œìˆ˜(ì¢…ë¥˜)ì…ë ¥ ");
 	scanf_s("%d", &type);
-	printf("»óÇ° º° ÀÔ°í¼ö·® ÀÔ·Â ");
+	printf("ìƒí’ˆ ë³„ ì…ê³ ìˆ˜ëŸ‰ ì…ë ¥ ");
 	for (int i = 0; i < type; i++)
 	{
 		scanf_s("%d", &receive);
 		total_receive[i] = receive;
 	}
-	printf("»óÇ° º° ÆÇ¸Å¼ö·® ÀÔ·Â ");
+	printf("ìƒí’ˆ ë³„ íŒë§¤ìˆ˜ëŸ‰ ì…ë ¥ ");
 	for (int j = 0; j < type; j++)
 	{
 		scanf_s("%d", &sale);
 		total_sale[j] = sale;
 	}
 
-	printf("Àç°í ¼ö·® = > ");
+	printf("ì¬ê³  ìˆ˜ëŸ‰ = > ");
 	for (int k = 0; k < type; k++)
 	{
 		printf("%d ", total_receive[k] - total_sale[k]);
 	}
-	printf("\nÃÑ ÆÇ¸Å·®: ");
+	printf("\nì´ íŒë§¤ëŸ‰: ");
 	for (int i = 0; i < type; i++)
 	{
 		total += total_sale[i];
 		sum_receive += total_receive[i];
 	}
-	printf("%d (ÆÇ¸ÅÀ² %f%)\n", total, ((double)total / sum_receive) * 100);
-	printf("°¡Àå ¸¹ÀÌ ÆÇ¸ÅµÈ »óÇ°: ID ");
+	printf("%d (íŒë§¤ìœ¨ %.2f%%)\n", total, ((double)total / sum_receive) * 100);
+	printf("ê°€ì¥ ë§ì´ íŒë§¤ëœ ìƒí’ˆ: ID ");
 	for (int i = 0; i < type; i++)
 	{
 		if (most < total_sale[i])
@@ -48,8 +48,8 @@ int main()
 			id = i + 1;
 		}
 	}
-	printf("%d, ÆÇ¸Å·® %d\n", id, most);
-	printf("°¡Àå Àû°Ô ÆÇ¸ÅµÈ »óÇ°: ID ");
+	printf("%d, íŒë§¤ëŸ‰ %d\n", id, most);
+	printf("ê°€ì¥ ì ê²Œ íŒë§¤ëœ ìƒí’ˆ: ID ");
 	min = total_sale[0];
 	for (int i = 0; i < type; i++)
 	{
@@ -59,12 +59,12 @@ int main()
 			id = i + 1;
 		}
 	}
-	printf("%d, ÆÇ¸Å·® %d\n", id, min);
+	printf("%d, íŒë§¤ëŸ‰ %d\n", id, min);
 	for (int i = 0; i < type; i++)
 	{
 		if (total_receive[i] - total_sale[i] <= 2)
 		{
-			printf("»óÇ° ID %d: Àç°íºÎÁ·(%d)\n", i + 1, total_receive[i] - total_sale[i]);
+			printf("ìƒí’ˆ ID %d: ì¬ê³ ë¶€ì¡±(%d)\n", i + 1, total_receive[i] - total_sale[i]);
 		}
 	}
 
