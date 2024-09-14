@@ -6,24 +6,24 @@ int main()
 	int total_receive[100];
 	int total_sale[100];
 
-	printf("»óÇ° °³¼ö(Á¾·ù)ÀÔ·Â ");
+	printf("ìƒí’ˆ ê°œìˆ˜(ì¢…ë¥˜)ì…ë ¥ ");
 	scanf_s("%d", &type);
-	printf("»óÇ° º° ÀÔ°í¼ö·® ÀÔ·Â ");
+	printf("ìƒí’ˆ ë³„ ì…ê³ ìˆ˜ëŸ‰ ì…ë ¥ ");
 	for (int i = 0; i < type; i++)
 	{
 		scanf_s("%d", &receive);
 		total_receive[i] = receive;
 	}
-	printf("»óÇ° º° ÆÇ¸Å¼ö·® ÀÔ·Â ");
+	printf("ìƒí’ˆ ë³„ íŒë§¤ìˆ˜ëŸ‰ ì…ë ¥ ");
 	for (int j = 0; j < type; j++)
 	{
 		scanf_s("%d", &sale);
 		total_sale[j] = sale;
 	}	
-	printf("ID ÀÔ·Â ");
+	printf("ID ì…ë ¥ ");
 	scanf_s("%d", &ID);
-	printf("ÀÔ·ÂÇÑ ID¿¡ ÇØ´çÇÏ´Â Á¦Ç°ÀÇ Àç°í ¼ö·® => %d\n", total_receive[ID - 1] - total_sale[ID - 1]);
-	printf("¸ğµç »óÇ°ÀÇ Àç°í ¼ö·® Ãâ·Â = > ");
+	printf("ì…ë ¥í•œ IDì— í•´ë‹¹í•˜ëŠ” ì œí’ˆì˜ ì¬ê³  ìˆ˜ëŸ‰ => %d\n", total_receive[ID - 1] - total_sale[ID - 1]);
+	printf("ëª¨ë“  ìƒí’ˆì˜ ì¬ê³  ìˆ˜ëŸ‰ ì¶œë ¥ = > ");
 	for (int k = 0; k < type; k++)
 	{
 		printf("%d ", total_receive[k] - total_sale[k]);
