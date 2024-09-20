@@ -15,18 +15,18 @@ int main()
 	int select_2 = 0;
 	int type = 5;
 
-	printf("[���θ� ���� ���α׷�]\n");
-	printf(">���ϴ� �޴��� �����ϼ���.(1. �԰�, 2. �Ǹ�, 3. ��ǰ��Ȳ, 4. ����)\n");
+	printf("[쇼핑몰 관리 프로그램]\n");
+	printf(">원하는 메뉴를 선택하세요.(1. 입고, 2. 판매, 3. 상품현황, 4. 종료)\n");
 	scanf_s("%d", &select_4);
 	while(select_4 != 4)
 	{
 		if (select_4 == 1)
 		{
-			printf("\n�԰����� �Է�: ��ü ��ǰ �԰����� �Է� 1, ���� ��ǰ �Է� 2�� ����\n");
+			printf("\n입고수량 입력: 전체 상품 입고수량 입력 1, 개별 상품 입력 2를 선택\n");
 			scanf_s("%d", &select_2);
 			if (select_2 == 1)
 			{
-				printf("��ü ��ǰ�� �԰������� �Է�>>> ");
+				printf("전체 상품의 입고수량을 입력>>> ");
 				for (int i = 0; i < 5; i++)
 				{
 					scanf_s("%d", &receive);
@@ -35,10 +35,10 @@ int main()
 			}
 			if (select_2 == 2)
 			{
-				printf("������ǰ ID �Է�\n");
+				printf("개별상품 ID 입력\n");
 				for (int i = 0; i < 5; i++)
 				{
-					printf("��ǰID : ");
+					printf("상품ID : ");
 					scanf_s("%d", &id);
 					scanf_s("%d", &total_receive[id - 1]);
 				}
@@ -46,11 +46,11 @@ int main()
 		}
 		if (select_4 == 2)
 		{
-			printf("�Ǹż��� �Է� : ��ü ��ǰ �Ǹż��� �Է� 1, ���� ��ǰ �Է� 2�� ����");
+			printf("판매수량 입력 : 전체 상품 판매수량 입력 1, 개별 상품 입력 2를 선택");
 			scanf_s("%d", &select_2);
 			if (select_2 == 1)
 			{
-				printf("��ü ��ǰ�� �Ǹż����� �Է�");
+				printf("전체 상품의 판매수량을 입력");
 				for (int i = 0; i < 5; i++)
 				{
 					scanf_s("%d", &sale);
@@ -59,12 +59,12 @@ int main()
 			}
 			if (select_2 == 2)
 			{
-				printf("������ǰ ID �Է�\n");
+				printf("개별상품 ID 입력\n");
 				for (int i = 0; i < 5; i++)
 				{
-					printf("��ǰID : ");
+					printf("상품ID : ");
 					scanf_s("%d", &id);
-					printf("�Ǹż��� : ");
+					printf("판매수량 : ");
 					scanf_s("%d", &total_sale[id - 1]);
 				}
 			}
@@ -73,19 +73,19 @@ int main()
 		{
 			sum_receive = 0;
 			total = 0;
-			printf("��� ���� = > ");
+			printf("재고 수량 = > ");
 			for (int k = 0; k < type; k++)
 			{
 				printf("%d ", total_receive[k] - total_sale[k]);
 			}
-			printf("\n�� �Ǹŷ�: ");
+			printf("\n총 판매량: ");
 			for (int i = 0; i < type; i++)
 			{
 				total += total_sale[i];
 				sum_receive += total_receive[i];
 			}
-			printf("%d (�Ǹ��� %.2f%%)\n", total, ((double)total / sum_receive) * 100);
-			printf("���� ���� �Ǹŵ� ��ǰ: ID ");
+			printf("%d (판매율 %.2f%%)\n", total, ((double)total / sum_receive) * 100);
+			printf("가장 많이 판매된 상품: ID ");
 			for (int i = 0; i < type; i++)
 			{
 				if (most < total_sale[i])
@@ -94,8 +94,8 @@ int main()
 					id = i + 1;
 				}
 			}
-			printf("%d, �Ǹŷ� %d\n", id, most);
-			printf("���� ���� �Ǹŵ� ��ǰ: ID ");
+			printf("%d, 판매량 %d\n", id, most);
+			printf("가장 적게 판매된 상품: ID ");
 			min = total_sale[0];
 			for (int i = 0; i < type; i++)
 			{
@@ -105,19 +105,19 @@ int main()
 					id = i + 1;
 				}
 			}
-			printf("%d, �Ǹŷ� %d\n", id, min);
+			printf("%d, 판매량 %d\n", id, min);
 			for (int i = 0; i < type; i++)
 			{
 				if (total_receive[i] - total_sale[i] <= 2)
 				{
-					printf("��ǰ ID %d: �������(%d)\n", i + 1, total_receive[i] - total_sale[i]);
+					printf("상품 ID %d: 재고부족(%d)\n", i + 1, total_receive[i] - total_sale[i]);
 				}
 			}
 		}
-		printf(">���ϴ� �޴��� �����ϼ���.(1. �԰�, 2. �Ǹ�, 3. ��ǰ��Ȳ, 4. ����)\n");
+		printf(">원하는 메뉴를 선택하세요.(1. 입고, 2. 판매, 3. 상품현황, 4. 종료)\n");
 		scanf_s("%d", &select_4);
 	}
-	printf("���α׷��� �����մϴ�.\n");
+	printf("프로그램을 종료합니다.\n");
 
 	return 0;
 }
