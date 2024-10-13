@@ -21,7 +21,7 @@ typedef struct rect
 
 double dist(POINT p1, POINT p2)
 {
-	return sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p2.y, 2));
+	return sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2));
 }
 
 int main()
@@ -42,11 +42,11 @@ int main()
 
 	if (distance <= c2.radius)
 	{
-		printf("¿ø ¾È¿¡ ÀÖ½À´Ï´Ù.\n");
+		printf("ì› ì•ˆì— ìžˆìŠµë‹ˆë‹¤.\n");
 	}
 	else
 	{
-		printf("¿ø ¹Û¿¡ ÀÖ½À´Ï´Ù.\n");
+		printf("ì› ë°–ì— ìžˆìŠµë‹ˆë‹¤.\n");
 	}
 
 	return 0;
