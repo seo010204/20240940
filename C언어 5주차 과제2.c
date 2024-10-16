@@ -21,8 +21,8 @@ int main()
 		}
 		i++;
 	}
-	printf("ÀÔ·Â¹®ÀÚ¿­ : %s\n", input);
-	for (int i = 0; i < 26; i++) printf("%c ÃâÇöÈ½¼ö : %d\n", 'a' + i, count[i]);
+	printf("ì…ë ¥ëœë¬¸ìì—´ : %s\n", input);
+	for (int i = 0; i < 26; i++) printf("%c ì¶œí˜„íšŸìˆ˜ : %d\n", 'a' + i, count[i]);
 
 	return 0;
 }
