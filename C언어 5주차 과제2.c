@@ -15,7 +15,7 @@ int main()
 	i = 0;
 	while (input[i] != '\0')
 	{
-		if (input[i] >= 'a' || input[i] <= 'z')
+		if (input[i] >= 'a' && input[i] <= 'z')
 		{
 			count[input[i] - 'a']++;
 		}
