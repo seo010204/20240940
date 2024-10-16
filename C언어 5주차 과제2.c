@@ -21,7 +21,7 @@ int main()
 		}
 		i++;
 	}
-	printf("입력된문자열 : %s\n", input);
+	printf("입력문자열 : %s\n", input);
 	for (int i = 0; i < 26; i++) printf("%c 출현횟수 : %d\n", 'a' + i, count[i]);
 
 	return 0;
